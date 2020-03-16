@@ -9,7 +9,7 @@
 <p align="center">
   A brief analysis if it is possible to make good predictions on multivariate time series data with the supervised learning models within scikit learn library - by trying to predict the exchange rate of currencies. 
   <br>
-  <a href="https://github.com/jo-ai-chim/Project_Google_Trends_Prediction"><strong>Explore the code »</strong></a>
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor_Project/"><strong>Explore the code »</strong></a>
 </p>
 
 **What is this all about?**
