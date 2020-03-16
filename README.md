@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
-    <img src="./Pics/photo-1570303345338-e1f0eddf4946.jpg" alt="Predicition logo" width="408" height="272">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
+    <img src="./Pics/title.jpg" alt="Predicition logo" width="408" height="272">
   </a>
 </p>
 
@@ -37,7 +37,7 @@ First of all I thought about what metric should the data needs to justify. For m
 After having this imagination of the data I was looking for I needed to find the corresponding open financial data. Luckily I found this [article](https://towardsdatascience.com/best-5-free-stock-market-apis-in-2019-ad91dddec984) dealing with this topic. Here I first tried the yfinance API. When calling it with a specific currency or index I got the following data back:
 
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
     <img src="./Pics/yfinance_data.PNG" alt="yfinance data" width="408" height="272">
   </a>
 </p>
@@ -47,7 +47,7 @@ So this directly looked pretty promising. Based on wikipedia I set up a list for
 Afterwards I cleaned the data so that I only kept the currencies and indices for which I have at least data for 3.500 datapoints into the past. This resulted in two dataframes looking like:
 
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
     <img src="./Pics/dataframe_currencies.PNG" alt="currency dataframe" width="816" height="272">
   </a>
 </p>
@@ -55,7 +55,7 @@ Afterwards I cleaned the data so that I only kept the currencies and indices for
 Then I checked the lost due to data cleaning. Unfortunately I had to drop 62.7% of all the indices I tried to get data for. Even this is quite it is not too bad since there are so many indices in the world that I could easily increase the input in this area. For the currencies it was lookily a lot better. For 7ß0 % of all provided countries I could keep at least one currency. So in total I had 19 indices and currencies for 163 countries to train my model.
 
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
     <img src="./Pics/cleaning_overview.png" alt="cleaning overview" width="816" height="544">
   </a>
 </p>
@@ -63,7 +63,7 @@ Then I checked the lost due to data cleaning. Unfortunately I had to drop 62.7% 
 I also took a look at a world map to get a better feeling on how good the coverage of the gotten data is. As you can see from the map below it is quite good. Therefore I thought it is time to start the search for a model. 
 
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
     <img src="./Pics/cleaning_countries.png" alt="data coverage" width="816" height="544">
   </a>
 </p>
@@ -99,8 +99,8 @@ Even Lasso and Random Forest are slightly better than Gradient Boosting I chose 
 Here you can see the performance of the GradientBoostingRegressor after grid search:
 
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
-    <img src="./Pics/gradient_boosting_initial.PNG" alt="data coverage" width="816" height="544">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
+    <img src="./Pics/gradient_boosting_initial.PNG" alt="initial model" width="816" height="544">
   </a>
 </p>
 
@@ -119,8 +119,8 @@ Next I took a look at the number of features. Before checking if the model is de
 So it underlined the assumption that the model can still be improved even more by adding more relevant features. But with a mean squared error of 0.000045 and a r2 score of 0.98 the model is good for now.
 
 <p align="center">
-  <a href="https://github.com/jo-ai-chim/Google_Trends_Predictions">
-    <img src="./Pics/gradient_boosting_optimized.PNG" alt="data coverage" width="816" height="544">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
+    <img src="./Pics/gradient_boosting_optimized.PNG" alt="optimized model" width="816" height="544">
   </a>
 </p>  
 
