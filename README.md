@@ -38,7 +38,7 @@ After having this imagination of the data I was looking for I needed to find the
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/yfinance_data.PNG" alt="yfinance data" width="408" height="272">
+    <img src="./Pics/yfinance_data.PNG" alt="yfinance data" width="612" height="272">
   </a>
 </p>
 
@@ -56,7 +56,7 @@ Then I checked the lost due to data cleaning. Unfortunately I had to drop 62.7% 
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/cleaning_overview.png" alt="cleaning overview" width="816" height="544">
+    <img src="./Pics/cleaning_overview.png" alt="cleaning overview" width="816" height="480">
   </a>
 </p>
 
@@ -64,7 +64,7 @@ I also took a look at a world map to get a better feeling on how good the covera
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/cleaning_countries.png" alt="data coverage" width="816" height="544">
+    <img src="./Pics/cleaning_countries.png" alt="data coverage" width="816" height="480">
   </a>
 </p>
 
