@@ -81,7 +81,7 @@ After setting up the same frame for all models (like a custom train test split w
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/model_selection.PNG" alt="model selection" width="816" height="272">
+    <img src="./Pics/model_selection.png" alt="model selection" width="816" height="272">
   </a>
 </p>
 
