@@ -81,12 +81,11 @@ With the metric set up I chose the four most promising models within scikit lear
 
 After setting up the same frame for all models (like a custom train test split which simply splits the data at a specific date) and adding values from the past days as additional features to each datapoint I did a grid search for each of the models. The result for each model you can see in the tabel below. 
 
-| Model                     | mean squared error test  | r2 score test      | mean squared error train  | r2 score train     |
-| ------------------------- | ------------------------ | ------------------ | ------------------------- | ------------------ |
-| Lasso                     | 0.0001301024389039277    | 0.9305969754502278 | 9.516375287926458e-05     | 0.9901877244951565 |
-| RandomForestRegressor     | 0.00012147487839064245   | 0.9351993395500302 | 9.451654721419876e-06     | 0.9990254457469654 |
-| MLPRegressor              | 0.0062001852300656805    | -2.307483021537676 | 0.00019987267312134902    | 0.9793912527068535 |
-| GradientBoostingRegressor | 0.00016134446070864835   | 0.9139309480908275 | 2.2862603749033365e-05    | 0.9976426511149871 |
+<p align="center">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
+    <img src="./Pics/model_selection.PNG" alt="scalability" width="816" height="272">
+  </a>
+</p>
 
 Notes: 
 - Unfortunately the grid search really reached it's limits. My first try to loop through the models and gridsearch them wasn't finished after 48h so I stopped it and did the grid search in several steps.
@@ -100,7 +99,7 @@ Here you can see the performance of the GradientBoostingRegressor after grid sea
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/gradient_boosting_initial.PNG" alt="initial model" width="816" height="544">
+    <img src="./Pics/gradient_boosting_initial_v2.PNG" alt="initial model" width="816" height="544">
   </a>
 </p>
 
@@ -120,7 +119,7 @@ So it underlined the assumption that the model can still be improved even more b
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/gradient_boosting_optimized.PNG" alt="optimized model" width="816" height="544">
+    <img src="./Pics/gradient_boosting_optimized_v2.PNG" alt="optimized model" width="816" height="544">
   </a>
 </p>  
 
@@ -130,14 +129,11 @@ As a final check I wanted to take a look on the scalability and robustness of th
 
 For the European currencies the resulting model performed quite the same no matter if a index is in the features or not. For Asian currencies however the results was also still ok but not too good anymore. But for African or South American currencies the results got pretty bad. 
 
-| Country                      | mean squared error test  | r2 score test      | mean squared error train  | r2 score train     |
-| ---------------------------- | ------------------------ | ------------------ | ------------------------- | ------------------ |
-| Denmark (currency and index) | 0.0062001852300656805    | -2.307483021537676 | 0.00019987267312134902    | 0.9793912527068535 |
-| Japan (currency and index)   | 0.00016134446070864835   | 0.9139309480908275 | 2.2862603749033365e-05    | 0.9976426511149871 |
-| Switzerland (only currency)  | 0.0001301024389039277    | 0.9305969754502278 | 9.516375287926458e-05     | 0.9901877244951565 |
-| China (only currency)        | 0.00012147487839064245   | 0.9351993395500302 | 9.451654721419876e-06     | 0.9990254457469654 |
-| Urugay (only currency)       | 0.0062001852300656805    | -2.307483021537676 | 0.00019987267312134902    | 0.9793912527068535 |
-| Egypt (only currency)        | 0.00016134446070864835   | 0.9139309480908275 | 2.2862603749033365e-05    | 0.9976426511149871 |
+<p align="center">
+  <a href="https://github.com/jo-ai-chim/Currency_Predictor">
+    <img src="./Pics/scalability.PNG" alt="scalability" width="816" height="272">
+  </a>
+</p>
 
 Having the results from the ETL notebook in mind this absolutely makes sense. Since we have most input data for European and North American area. For Asia we have less values and for the Africa and South America we have even less values so the correlation between our features and the labels is not too big anymore.
 
