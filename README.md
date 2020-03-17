@@ -54,7 +54,7 @@ Then I checked the lost due to data cleaning. Unfortunately I had to drop 62.7% 
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/cleaning_overview.png" alt="cleaning overview" width="816" height="480">
+    <img src="./Pics/cleaning_overview.png" alt="cleaning overview" width="816" height="360">
   </a>
 </p>
 
@@ -62,7 +62,7 @@ I also took a look at a world map to get a better feeling on how good the covera
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/cleaning_countries.png" alt="data coverage" width="816" height="480">
+    <img src="./Pics/cleaning_countries.png" alt="data coverage" width="816" height="390">
   </a>
 </p>
 
@@ -81,7 +81,7 @@ After setting up the same frame for all models (like a custom train test split w
 
 <p align="center">
   <a href="https://github.com/jo-ai-chim/Currency_Predictor">
-    <img src="./Pics/model_selection.png" alt="model selection" width="816" height="272">
+    <img src="./Pics/model_selection.png" alt="model selection" width="816" height="160">
   </a>
 </p>
 
